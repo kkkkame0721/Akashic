@@ -21,7 +21,7 @@ const AppState = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("https://kkkkame0721.github.io/demoApp/data.json?ver=" + Date.now())
+  fetch("https://kkkkame0721.github.io/Akashic/data.json?ver=" + Date.now())
     .then(res => res.json())
     .then(data => {
       createCards(data);
@@ -219,10 +219,10 @@ function tabChange(targetTabName) {
     const img = tab.querySelector("img");
     if (name === targetTabName) {
       tab.classList.add("active");
-      img.src = `https://kkkkame0721.github.io/demoApp/icon/${name}_active.svg`;
+      img.src = `https://kkkkame0721.github.io/Akashic/icon/${name}_active.svg`;
     } else {
       tab.classList.remove("active");
-      img.src = `https://kkkkame0721.github.io/demoApp/icon/${name}.svg`;
+      img.src = `https://kkkkame0721.github.io/Akashic/icon/${name}.svg`;
     }
   });
 }
@@ -329,7 +329,7 @@ function init() {
         tmpPanel = '<button class="action-btn inactive">まだ入場できません</button>';
       } else if (index === 2) {
         tmpPanel = `
-                    <img id="stub-image" src="https://kkkkame0721.github.io/demoApp/img/ticket_blank.jpg" style="width: 60%; display: block; margin: 0 auto; border-radius: 12px;">
+                    <img id="stub-image" src="https://kkkkame0721.github.io/Akashic/img/ticket_blank.jpg" style="width: 60%; display: block; margin: 0 auto; border-radius: 12px;">
                     <div class="stub-actions">
                         <button class="action-btn">撮影する</button>
                         <button class="action-btn">写真・動画を選ぶ</button>
@@ -337,7 +337,7 @@ function init() {
                 `;
       } else {
         tmpPanel = `
-                    <img src="https://kkkkame0721.github.io/demoApp/video/${card.dataset.thumbid}-thumbnail.jpg?ver=1.3" style="width: 60%; display: block; margin: 0 auto; border-radius: 12px;"/>
+                    <img src="https://kkkkame0721.github.io/Akashic/video/${card.dataset.thumbid}-thumbnail.jpg?ver=1.3" style="width: 60%; display: block; margin: 0 auto; border-radius: 12px;"/>
                     <button class="action-btn" onclick=showPage('collection')>コレクションへ</button>
                 `;
       }
